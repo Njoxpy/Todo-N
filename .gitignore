@@ -1,0 +1,9 @@
+# Ignore build artifacts
+/build/
+/dist/
+
+# Ignore configuration files
+/config/*.config
+
+# Ignore temporary files
+/temp/
