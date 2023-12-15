@@ -1,11 +1,19 @@
-// select an element into the various field(input, button and orderedLists field)
-const inputTask = document.getElementById('input-task');
-const submitButton = document.getElementById('submit-button');
-const taskAdded = document.getElementById('ordered-task');
-const value = inputTask.value;
-console.log(value);
+const inputBox = document.getElementById("input-box");
+const listContainer = document.getElementById("task-list");
 
-// creating elements
-const ul = document.querySelector('ul');
-const listItem = document.createElement('li');
-ul.append(listItem);
+// create a function for handling user input
+function addTask() {
+    if(inputBox.value === ''){
+        alert("Jaza  kitu!");
+    }
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
+    }
+    inputBox.value = '';
+}
